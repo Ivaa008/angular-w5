@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  form {
+    margin: 20px 0;
+  }
+  
+  label, input, button {
+    display: block;
+    margin: 5px 0;
+  }
+  
