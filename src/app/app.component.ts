@@ -1,11 +1,9 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
-import { FormControl,FormGroup } from '@angular/forms';
-import { provideHttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -19,7 +17,9 @@ export class AppComponent implements OnInit{
   constructor(private dataService: DataService){}
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(response=> {this.data=response;console.log(this.data)});
+    this.dataService.getData().subscribe(response=> {
+    this.data=response;
+    console.log(this.data)});
   }
   
 }
